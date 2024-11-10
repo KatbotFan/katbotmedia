@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Katbot Media Archive</title>
+      <style>
+         body {
+         font-family: Arial, sans-serif;
+         background-color: #f4f4f9;
+         color: #333;
+         margin: 0;
+         padding: 0;
+         }
+         .header-image {
+         display: block;
+         max-width: 100px; /* Set a fixed maximum width */
+         height: auto;
+         margin: 0 auto 20px auto;
+         border-radius: 8px; /* Optional: for consistent rounded corners */
+         }
+         .container {
+         max-width: 800px;
+         margin: 20px auto;
+         padding: 20px;
+         background-color: #fff;
+         border-radius: 8px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         }
+         h1, h2 {
+         color: #8B0000;
+         }
+         h1 {
+         text-align: center;
+         }
+         ul {
+         list-style: none;
+         padding: 0;
+         }
+         a {
+         color: #8B0000;
+         text-decoration: none;
+         }
+         a:hover {
+         text-decoration: underline;
+         }
+         .collapsible {
+         background-color: #e9ecef;
+         border: none;
+         color: #8B0000;
+         cursor: pointer;
+         padding: 10px;
+         width: 100%;
+         text-align: left;
+         outline: none;
+         font-size: 16px;
+         margin-top: 10px;
+         border-radius: 4px;
+         }
+         .content {
+         padding: 0 18px;
+         display: none;
+         overflow: hidden;
+         background-color: #f9f9f9;
+         margin-bottom: 10px;
+         }
+         .playlist-container {
+         position: fixed;
+         bottom: 20px;
+         right: 20px;
+         width: 250px;
+         padding: 15px;
+         background-color: #fff;
+         border: 1px solid #ddd;
+         border-radius: 8px;
+         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+         z-index: 1000;
+         text-align: center;
+         }
+         .playlist-button, .skip-button {
+         padding: 8px 16px;
+         background-color: #8B0000;
+         color: white;
+         border: none;
+         cursor: pointer;
+         border-radius: 5px;
+         font-size: 14px;
+         margin: 5px;
+         }
+         .skip-button {
+         display: none; /* Initially hidden */
+         }
+         .audio-info {
+         margin-top: 10px;
+         font-size: 14px;
+         color: #8B0000;
+         }
+         .progress-bar {
+         width: 100%;
+         background-color: #ddd;
+         height: 5px;
+         border-radius: 5px;
+         overflow: hidden;
+         cursor: pointer;
+         margin-top: 10px;
+         }
+         .progress-fill {
+         height: 100%;
+         background-color: #8B0000;
+         width: 0%;
+         }
+         audio, video {
+         width: 100%;
+         margin-top: 10px;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <img src="katbot head.png" alt="Katbot" class="header-image">
+         <h1>Katbot Media Archive</h1>
+         <!-- Table of Contents -->
+         <div>
+            <h2>Contents</h2>
+            <ul>
+               <li><a href="#pitch-bible">Pitch Bible</a></li>
+               <li><a href="#scripts">Scripts</a></li>
+               <li><a href="#additional-scripts">Additional Scripts</a></li>
+               <li><a href="#audio-files">Audio Files</a></li>
+               <li><a href="#videos">Videos</a></li>
+            </ul>
+         </div>
+         <!-- Pitch Bible Section -->
+         <button class="collapsible" id="pitch-bible">Pitch Bible</button>
+         <div class="content">
+            <ul>
+               <li><a href="katbot pitch bible.pdf" target="_blank">View Pitch Bible</a></li>
+            </ul>
+         </div>
+         <!-- Scripts Section -->
+         <button class="collapsible" id="scripts">Scripts</button>
+         <div class="content">
+            <ul>
+               <li><a href="scripts/723A-101num-revfinal 2-18.pdf" target="_blank">101 "Party Animal" Script</a></li>
+               <li><a href="scripts/723A-102num-revised-final-punchup.pdf" target="_blank">102 "First Day of School" Script</a></li>
+               <li><a href="scripts/723A-103num-pink.pdf" target="_blank">103 "Lowrider Bot" Script</a></li>
+               <li><a href="scripts/723A-104num-rev-pink.pdf" target="_blank">104 "We Are Family" Script</a></li>
+               <li><a href="scripts/723A-105-revised polish.pdf" target="_blank">105 "Kitbot" Script</a></li>
+               <li><a href="scripts/723A-106num-rev-blue.pdf" target="_blank">106 "Sneaking Out Is Hard to Do" Script</a></li>
+               <li><a href="scripts/723A-107rev num-A.pdf" target="_blank">107 "The Waiting-Dance Craze" Script</a></li>
+               <li><a href="scripts/723A-108 Trying To Score-premise.pdf" target="_blank">108 "Trying to Score" Outline</a></li>
+               <li><a href="scripts/723A-109 and 110scr1.pdf" target="_blank">109-110 "Kit and Kin" Script (Special)</a></li>
+               <li><a href="scripts/723A-111num-rev final.pdf" target="_blank">111 "Flirty Dancing" Script</a></li>
+               <li><a href="scripts/723A-112num-revfnlblue.pdf" target="_blank">112 "Babysitting-Bot" Script</a></li>
+               <li><a href="scripts/723A-113num- revfinal.pdf" target="_blank">113 "Collection Purr-fection" Script</a></li>
+               <li><a href="scripts/723A-114num-polish-yellow.pdf" target="_blank">114 "The Mark of Curd" Script</a></li>
+               <li><a href="scripts/723A-115num.pdf" target="_blank">115 "Katbot Fever" Script</a></li>
+               <li><a href="scripts/723A-116-polish-punch-a.pdf" target="_blank">116 "Rebel Without a Claw" Script</a></li>
+               <li><a href="scripts/723A-117num.pdf" target="_blank">117 "Sign of the Katbot" Script</a></li>
+               <li><a href="scripts/723A-118num-rev-pink.pdf" target="_blank">118 "Dude Time" Script</a></li>
+               <li><a href="scripts/723A-119num.pdf" target="_blank">119 "Bad Fur Day" Script</a></li>
+               <li><a href="scripts/723A-120num-rev.pdf" target="_blank">120 "Junior's Math Problem" Script</a></li>
+               <li><a href="scripts/723A-121num-rev.pdf" target="_blank">121 "Mother's Day the Katbot Way" Script</a></li>
+               <li><a href="scripts/723A-122num-polish.pdf" target="_blank">122 "Katbot Plus Trevor" Script</a></li>
+               <li><a href="scripts/723A-123num-revisedfinal.pdf" target="_blank">123 "Parental Upgrade" Script</a></li>
+               <li><a href="scripts/723A-124scr2.pdf" target="_blank">124 "Project Katbot" Script</a></li>
+               <li><a href="scripts/723A-125num-blue.pdf" target="_blank">125 "Night of the Living Squirrel" Script</a></li>
+               <li><a href="scripts/723A-126num-revpink.pdf" target="_blank">126 "Picture Day" Script</a></li>
+               <li><a href="scripts/723A-127num-rev.pdf" target="_blank">127 "Logo Loco" Script</a></li>
+               <li><a href="scripts/723A-128 Rocky's Game P1.pdf" target="_blank">128 "Rocky's Game" Outline</a></li>
+               <li><a href="scripts/723A-129num-blue.pdf" target="_blank">129 "Tough Enough" Script</a></li>
+               <li><a href="scripts/723A-130num.pdf" target="_blank">130 "Cheerbot" Script</a></li>
+               <li><a href="scripts/723A-131num.pdf" target="_blank">131 "Downloading Diva" Script</a></li>
+               <li><a href="scripts/723A-132num-polishpunchup.pdf" target="_blank">132 "Fraidy Kat" Script</a></li>
+               <li><a href="scripts/723A-133num-rev2.pdf" target="_blank">133 "Kat Fight" Script</a></li>
+               <li><a href="scripts/723A-134num-punchup-polish-pink.pdf" target="_blank">134 "Claw & Order" Script</a></li>
+               <li><a href="scripts/723A-135num.pdf" target="_blank">135 "Overachiever-Bot" Script</a></li>
+               <li><a href="scripts/723A-136and137scr2.pdf" target="_blank">136-137 "Christmas on Katatonia" Script (Special)</a></li>
+               <li><a href="scripts/723A-138num.pdf" target="_blank">138 "Dick's Biscuits" Script</a></li>
+               <li><a href="scripts/723A-139scr2.pdf" target="_blank">139 "All About Eddie" Script</a></li>
+               <li><a href="scripts/723A-140scr2.pdf" target="_blank">140 "Tell-Tale Katbot" Script</a></li>
+               <li><a href="scripts/723A-141scr1.pdf" target="_blank">141 "On the Road Again" Script</a></li>
+               <li><a href="scripts/723A-142scr2.pdf" target="_blank">142 "What's the Point?" Script</a></li>
+               <li><a href="scripts/723A-143scr2.pdf" target="_blank">143 "H2Uh-Oh!" Script</a></li>
+               <li><a href="scripts/723A-144scr1.pdf" target="_blank">144 "Make-Over Bot" Script</a></li>
+               <!-- Add other screenplays here -->
+            </ul>
+         </div>
+         <!-- Scripts Section -->
+         <button class="collapsible" id="additional-scripts">Additional Scripts</button>
+         <div class="content">
+            <ul>
+               <li><a href="scripts/Katbot Theme 5.pdf" target="_blank">"Katbot Theme V5" Lyrics</a></li>
+               <li><a href="scripts/IT'S A KATBOT DAY v5.pdf" target="_blank">"It's a Katbot Day" Lyrics</a></li>
+               <li><a href="scripts/Katbot HippyDitty LYRICS.pdf" target="_blank">"Hippy Ditty" Lyrics</a></li>
+               <!-- Add other screenplays here -->
+            </ul>
+         </div>
+         <!-- Audio Files Section -->
+         <button class="collapsible" id="audio-files">Audio Files</button>
+         <div class="content">
+            <ul>
+               <li>
+                  <p>1 Audio Track.mp3</p>
+                  <audio controls>
+                     <source src="tracks/1 Audio Track.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <li>
+                  <p>feel free full mix.mp3</p>
+                  <audio controls>
+                     <source src="tracks/feel free full mix.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <li>
+                  <p>Flirty V2.mp3</p>
+                  <audio controls>
+                     <source src="tracks/Flirty V2.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <li>
+                  <p>Improved Katbot day 1.mp3</p>
+                  <audio controls>
+                     <source src="tracks/Improved Katbot day 1.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <li>
+                  <p>Katbot Day V6 Full_.mp3</p>
+                  <audio controls>
+                     <source src="tracks/Katbot Day V6 Full_.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <li>
+                  <p>Katbot FG Rev2.mp3</p>
+                  <audio controls>
+                     <source src="tracks/Katbot FG Rev2.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <li>
+                  <p>Katbot Flirty.mp3</p>
+                  <audio controls>
+                     <source src="tracks/Katbot Flirty.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <li>
+                  <p>Katbot HippyDittyTmp FULL.mp3</p>
+                  <audio controls>
+                     <source src="tracks/Katbot HippyDittyTmp FULL.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <li>
+                  <p>Katbot LucyDitty.mp3</p>
+                  <audio controls>
+                     <source src="tracks/Katbot LucyDitty.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <li>
+                  <p>Katbot1.mp3</p>
+                  <audio controls>
+                     <source src="tracks/Katbot1.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <li>
+                  <p>Katbot2.mp3</p>
+                  <audio controls>
+                     <source src="tracks/Katbot2.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <li>
+                  <p>Katbot3.mp3</p>
+                  <audio controls>
+                     <source src="tracks/Katbot3.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <li>
+                  <p>Katbot4.mp3</p>
+                  <audio controls>
+                     <source src="tracks/Katbot4.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <li>
+                  <p>Katbot2005 V3.mp3</p>
+                  <audio controls>
+                     <source src="tracks/Katbot2005 V3.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <li>
+                  <p>KatbotDanny1.mp3</p>
+                  <audio controls>
+                     <source src="tracks/KatbotDanny1.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <li>
+                  <p>KatbotWaiting FULL.mp3</p>
+                  <audio controls>
+                     <source src="tracks/KatbotWaiting FULL.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <li>
+                  <p>Place Like This Full.mp3</p>
+                  <audio controls>
+                     <source src="tracks/Place Like This Full.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <li>
+                  <p>Tony BaloneyFull Mix.mp3</p>
+                  <audio controls>
+                     <source src="tracks/Tony BaloneyFull Mix.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <li>
+                  <p>WaitingFull mixxx(Mastered).mp3</p>
+                  <audio controls>
+                     <source src="tracks/WaitingFull mixxx(Mastered).mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </li>
+               <!-- Add more audio files as needed -->
+            </ul>
+         </div>
+         <!-- Videos Section -->
+         <button class="collapsible" id="videos">Videos</button>
+         <div class="content">
+            <ul>
+               <li>
+                  <p>Katbot "Party Animal" Animatic</p>
+                  <video controls>
+                     <source src="101partyanimal.mp4" type="video/mp4">
+                     Your browser does not support the video element.
+                  </video>
+               </li>
+            </ul>
+         </div>
+         <!-- Floating Playlist Controls -->
+         <div class="playlist-container">
+            <button class="playlist-button" onclick="togglePlay()">Start Playlist</button>
+            <button class="skip-button" onclick="skipTrack()">Skip Song</button>
+            <div class="audio-info">
+               <span id="track-title">Track Title</span>
+               <span id="track-time"> - 0:00 / 0:00</span>
+            </div>
+            <div class="progress-bar" onclick="seekAudio(event)">
+               <div class="progress-fill" id="progress-fill"></div>
+            </div>
+         </div>
+         <!-- Hidden audio player -->
+         <audio id="playlist-audio" style="display:none;"></audio>
+      </div>
+      <script>
+         const audioFiles = [
+           { title: "1 Audio Track.mp3", src: "tracks/1 Audio Track.mp3" },
+           { title: "feel free full mix.mp3", src: "tracks/feel free full mix.mp3" },
+           { title: "Flirty V2.mp3", src: "tracks/Flirty V2.mp3" },
+           { title: "Improved Katbot day 1.mp3", src: "tracks/Improved Katbot day 1.mp3" },
+           { title: "Katbot Day V6 Full_.mp3", src: "tracks/Katbot Day V6 Full_.mp3" },
+         { title: "Katbot FG Rev2.mp3", src: "tracks/Katbot FG Rev2.mp3" },
+         { title: "Katbot Flirty.mp3", src: "tracks/Katbot Flirty.mp3" },
+         { title: "Katbot HippyDittyTmp FULL.mp3", src: "tracks/Katbot HippyDittyTmp FULL.mp3" },
+         { title: "Katbot LucyDitty.mp3", src: "tracks/Katbot LucyDitty.mp3" },
+         { title: "Katbot1.mp3", src: "tracks/Katbot1.mp3" },
+         { title: "Katbot2.mp3", src: "tracks/Katbot2.mp3" },
+         { title: "Katbot3.mp3", src: "tracks/Katbot3.mp3" },
+         { title: "Katbot4.mp3", src: "tracks/Katbot4.mp3" },
+         { title: "Katbot2005 V3.mp3", src: "tracks/Katbot2005 V3.mp3" },
+         { title: "KatbotDanny1.mp3", src: "tracks/KatbotDanny1.mp3" },
+         { title: "KatbotWaiting FULL.mp3", src: "tracks/KatbotWaiting FULL.mp3" },
+         { title: "Place Like This Full.mp3", src: "tracks/Place Like This Full.mp3" },
+         { title: "Tony BaloneyFull Mix.mp3", src: "tracks/Tony BaloneyFull Mix.mp3" },
+         { title: "WaitingFull mixxx(Mastered).mp3", src: "tracks/WaitingFull mixxx(Mastered).mp3" },
+           // Add all other audio tracks here
+         ];
+         
+         let shuffledPlaylist = [];
+         let currentTrack = 0;
+         let isPlaying = false;
+         const audioPlayer = document.getElementById("playlist-audio");
+         const trackTitle = document.getElementById("track-title");
+         const trackTime = document.getElementById("track-time");
+         const progressFill = document.getElementById("progress-fill");
+         const skipButton = document.querySelector(".skip-button");
+         
+         // Shuffle and prepare a non-repeating playlist
+         function shufflePlaylist() {
+           shuffledPlaylist = [...audioFiles];
+           for (let i = shuffledPlaylist.length - 1; i > 0; i--) {
+             const j = Math.floor(Math.random() * (i + 1));
+             [shuffledPlaylist[i], shuffledPlaylist[j]] = [shuffledPlaylist[j], shuffledPlaylist[i]];
+           }
+           currentTrack = 0; // Start from the beginning of the new shuffled list
+         }
+         
+         // Start or pause the playlist
+         function togglePlay() {
+           if (!isPlaying) {
+             if (audioPlayer.src === "") {
+               shufflePlaylist();
+               loadTrack();
+             }
+             audioPlayer.play();
+             isPlaying = true;
+             document.querySelector(".playlist-button").textContent = "Pause";
+             skipButton.style.display = "inline-block"; // Show skip button after starting
+           } else {
+             audioPlayer.pause();
+             isPlaying = false;
+             document.querySelector(".playlist-button").textContent = "Resume";
+           }
+         }
+         
+         // Load and play the current track
+         function loadTrack() {
+           if (currentTrack >= shuffledPlaylist.length) {
+             shufflePlaylist(); // Reshuffle when all tracks are played
+           }
+           audioPlayer.src = shuffledPlaylist[currentTrack].src;
+           trackTitle.textContent = shuffledPlaylist[currentTrack].title;
+           audioPlayer.load();
+           audioPlayer.play();
+           isPlaying = true;
+           document.querySelector(".playlist-button").textContent = "Pause";
+         }
+         
+         // Play the next track without repeating
+         function skipTrack() {
+           currentTrack++;
+           if (currentTrack >= shuffledPlaylist.length) {
+             shufflePlaylist();
+           }
+           loadTrack();
+         }
+         
+         // Automatically play the next track when one ends
+         audioPlayer.onended = () => {
+           skipTrack();
+         };
+         
+         // Update time and progress bar
+         audioPlayer.ontimeupdate = () => {
+           const currentTime = formatTime(audioPlayer.currentTime);
+           const duration = formatTime(audioPlayer.duration);
+           trackTime.textContent = ` - ${currentTime} / ${duration}`;
+           
+           const progressPercent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+           progressFill.style.width = progressPercent + "%";
+         };
+         
+         // Format time in MM:SS
+         function formatTime(seconds) {
+           const minutes = Math.floor(seconds / 60);
+           const secs = Math.floor(seconds % 60).toString().padStart(2, "0");
+           return `${minutes}:${secs}`;
+         }
+         
+         // Seek to a specific point in the audio
+         function seekAudio(event) {
+           const progressBar = event.currentTarget;
+           const clickPosition = event.offsetX / progressBar.offsetWidth;
+           audioPlayer.currentTime = clickPosition * audioPlayer.duration;
+         }
+         
+         // Collapsible sections for other content
+         document.querySelectorAll(".collapsible").forEach(button => {
+           button.addEventListener("click", function() {
+             this.classList.toggle("active");
+             var content = this.nextElementSibling;
+             content.style.display = content.style.display === "block" ? "none" : "block";
+           });
+         });
+      </script>
+   </body>
+</html>
