@@ -4,117 +4,121 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Katbot Media Archive</title>
-	  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<style>
-   body {
-      font-family: Arial, sans-serif;
-      background-color: #0b1b3f;
-      color: #ffffff;
-      margin: 0;
-      padding: 0;
-   }
-   .header-image {
-      display: block;
-      max-width: 100px;
-      height: auto;
-      margin: 0 auto 20px auto;
-      border-radius: 8px;
-   }
-   .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #1a237e;
-      border-radius: 8px;
-   }
-   h1, h2 {
-      color: #ffffff;
-      text-align: center;
-   }
-   ul {
-      list-style: none;
-      padding: 0;
-   }
-   a {
-      color: #80d8ff;
-      text-decoration: none;
-   }
-   a:hover {
-      text-decoration: underline;
-   }
-   .collapsible {
-      background-color: #303f9f;
-      border: none;
-      color: #ffffff;
-      cursor: pointer;
-      padding: 10px;
-      width: 100%;
-      text-align: left;
-      outline: none;
-      font-size: 16px;
-      margin-top: 10px;
-      border-radius: 4px;
-   }
-   .content {
-      padding: 0 18px;
-      display: none;
-      overflow: hidden;
-      background-color: #1a237e;
-      margin-bottom: 10px;
-   }
-   .playlist-container {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 250px;
-      padding: 15px;
-      background-color: #1a237e;
-	  border-radius: 8px;
-      text-align: center;
-   }
-   .playlist-button, .skip-button {
-      padding: 8px 16px;
-      background-color: #3949ab;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-      font-size: 14px;
-      margin: 5px;
-   }
-   .skip-button {
-      display: none;
-   }
-   .audio-info {
-      margin-top: 10px;
-      font-size: 14px;
-      color: #80d8ff;
-   }
-   .progress-bar {
-      width: 100%;
-      background-color: #ddd;
-      height: 5px;
-      border-radius: 5px;
-      overflow: hidden;
-      cursor: pointer;
-      margin-top: 10px;
-   }
-   .progress-fill {
-      height: 100%;
-      background-color: #80d8ff;
-      width: 0%;
-   }
-   audio, video {
-      width: 100%;
-      margin-top: 10px;
-   }
-   footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #80d8ff;
-   }
-</style>
+      <link rel="icon" type="image/x-icon" href="favicon.ico">
+      <style>
+         body {
+         font-family: Arial, sans-serif;
+         background-color: #0b1b3f;
+         color: #ffffff;
+         margin: 0;
+         padding: 0;
+         }
+         .header-image {
+         display: block;
+         max-width: 100px;
+         height: auto;
+         margin: 0 auto 20px auto;
+         border-radius: 8px;
+         }
+         .container {
+         max-width: 800px;
+         margin: 20px auto;
+         padding: 20px;
+         background-color: #1a237e;
+         border-radius: 8px;
+         }
+         h1 {
+         color: #ffffff;
+         text-align: center;
+         }
+         h2 {
+         color: #ffffff;
+         text-align: left;
+         }
+         ul {
+         list-style: none;
+         padding: 0;
+         }
+         a {
+         color: #80d8ff;
+         text-decoration: none;
+         }
+         a:hover {
+         text-decoration: underline;
+         }
+         .collapsible {
+         background-color: #303f9f;
+         border: none;
+         color: #ffffff;
+         cursor: pointer;
+         padding: 10px;
+         width: 100%;
+         text-align: left;
+         outline: none;
+         font-size: 16px;
+         margin-top: 10px;
+         border-radius: 4px;
+         }
+         .content {
+         padding: 0 18px;
+         display: none;
+         overflow: hidden;
+         background-color: #1a237e;
+         margin-bottom: 10px;
+         }
+         .playlist-container {
+         position: fixed;
+         bottom: 20px;
+         right: 20px;
+         width: 250px;
+         padding: 15px;
+         background-color: #1a237e;
+         border-radius: 8px;
+         text-align: center;
+         }
+         .playlist-button, .skip-button {
+         padding: 8px 16px;
+         background-color: #3949ab;
+         color: white;
+         border: none;
+         cursor: pointer;
+         border-radius: 5px;
+         font-size: 14px;
+         margin: 5px;
+         }
+         .skip-button {
+         display: none;
+         }
+         .audio-info {
+         margin-top: 10px;
+         font-size: 14px;
+         color: #80d8ff;
+         }
+         .progress-bar {
+         width: 100%;
+         background-color: #ddd;
+         height: 5px;
+         border-radius: 5px;
+         overflow: hidden;
+         cursor: pointer;
+         margin-top: 10px;
+         }
+         .progress-fill {
+         height: 100%;
+         background-color: #80d8ff;
+         width: 0%;
+         }
+         audio, video {
+         width: 100%;
+         margin-top: 10px;
+         }
+         footer {
+         text-align: center;
+         padding: 20px;
+         font-size: 14px;
+         color: #80d8ff;
+         }
+      </style>
    </head>
    <body>
       <div class="container">
@@ -348,21 +352,21 @@
                      Your browser does not support the video element.
                   </video>
                </li>
-			   <li>
+               <li>
                   <p>Katbot "Theme Song" Clip</p>
                   <video controls>
                      <source src="videos/katbot theme song.mp4" type="video/mp4">
                      Your browser does not support the video element.
                   </video>
                </li>
-			   <li>
+               <li>
                   <p>First Pilot Clip</p>
                   <video controls>
                      <source src="videos/pilot clip.mp4" type="video/mp4">
                      Your browser does not support the video element.
                   </video>
                </li>
-			   <li>
+               <li>
                   <p>Second Pilot Clip</p>
                   <video controls>
                      <source src="videos/pilot clip 2.mp4" type="video/mp4">
@@ -507,11 +511,9 @@
            });
          });
       </script>
-   
-    <footer style="text-align: center; padding: 20px; font-size: 14px; color: #ffffff;">
-        <p>Last Updated: 11/09/2024</p>
-        <p>Contact Info: katbotfan@gmail.com</p>
-    </footer>
-    </body>
-    
+      <footer style="text-align: center; padding: 20px; font-size: 14px; color: #ffffff;">
+         <p>Last Updated: 11/09/2024</p>
+         <p>Contact Info: katbotfan@gmail.com</p>
+      </footer>
+   </body>
 </html>
