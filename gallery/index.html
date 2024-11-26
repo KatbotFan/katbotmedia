@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Katbot Gallery</title>
+      <link rel="icon" type="image/x-icon" href="../favicon.ico">
+      <style>
+         body {
+         font-family: Arial, sans-serif;
+         background-color: #0b1b3f;
+         color: #ffffff;
+         margin: 0;
+         padding: 0;
+         }
+         .container {
+         max-width: 800px;
+         margin: 20px auto;
+         padding: 20px;
+         background-color: #1a237e;
+         border-radius: 8px;
+         }
+         h1, h2 {
+         color: #ffffff;
+         text-align: center;
+         }
+         .gallery-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+         gap: 10px;
+         }
+         .gallery-item {
+         overflow: hidden;
+         border-radius: 8px;
+         background-color: #303f9f;
+         cursor: pointer;
+         }
+         .gallery-image {
+         width: 100%;
+         height: auto;
+         display: block;
+         transition: transform 0.3s ease;
+         }
+         .gallery-image:hover {
+         transform: scale(1.1);
+         }
+         footer {
+         text-align: center;
+         padding: 20px;
+         font-size: 14px;
+         color: #80d8ff;
+         }
+         /* Lightbox styles */
+         .lightbox {
+         display: none;
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: rgba(0, 0, 0, 0.9);
+         justify-content: center;
+         align-items: center;
+         z-index: 1000;
+         }
+         .lightbox.active {
+         display: flex;
+         }
+         .lightbox img {
+         max-width: 90%;
+         max-height: 80%;
+         border-radius: 8px;
+         }
+         .lightbox .close, .lightbox .arrow {
+         position: absolute;
+         color: #fff;
+         font-size: 2rem;
+         background: rgba(0, 0, 0, 0.5);
+         border: none;
+         cursor: pointer;
+         padding: 10px;
+         border-radius: 50%;
+         }
+         .lightbox .close {
+         top: 20px;
+         right: 20px;
+         }
+         .lightbox .arrow {
+         top: 50%;
+         transform: translateY(-50%);
+         }
+         .lightbox .arrow.left {
+         left: 20px;
+         }
+         .lightbox .arrow.right {
+         right: 20px;
+         }
+         .lightbox .counter {
+         position: absolute;
+         top: 20px;
+         left: 20px;
+         color: #ffffff;
+         font-size: 1.2rem;
+         background: rgba(0, 0, 0, 0.5);
+         padding: 5px 10px;
+         border-radius: 8px;
+         }
+         .return-button {
+         margin-top: 20px;
+         padding: 10px 20px;
+         background-color: #3949ab;
+         color: white;
+         border: none;
+         cursor: pointer;
+         border-radius: 5px;
+         font-size: 16px;
+         text-decoration: none;
+         }
+         .return-button:hover {
+         background-color: #303f9f;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <h1>Gallery</h1>
+         <h2>Katbot Promo Material</h2>
+         <div class="gallery-grid" data-gallery="gallery-one">
+            <div class="gallery-item">
+               <img src="KatbotPromo.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="KatbotPromo2.png" class="gallery-image">
+            </div>
+         </div>
+         <h2>Katbot Background Art</h2>
+         <div class="gallery-grid" data-gallery="gallery-two">
+            <div class="gallery-item">
+               <img src="Katbot-living-room.jpg" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="Katbot-house.jpg" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="Katbotbg.jpg" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="Katbotbg2.jpg" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="Katbotbg3.jpg" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="Katbotbg4.jpg" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="Katbotbg5.jpg" class="gallery-image">
+            </div>
+         </div>
+         <h2>"We Are Family" Storyboards</h2>
+         <div class="gallery-grid" data-gallery="gallery-three">
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0001.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0002.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0003.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0004.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0005.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0006.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0007.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0008.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0009.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0010.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0011.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0012.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0013.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0014.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0015.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0016.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0017.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0018.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0019.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0020.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0021.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0022.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboards_Katbot_sluggedSamples_0023.png" class="gallery-image">
+            </div>
+         </div>
+         <h2>"The Waiting-Dance Craze" Storyboards</h2>
+         <div class="gallery-grid" data-gallery="gallery-four">
+            <div class="gallery-item">
+               <img src="waitingdance1.jpg" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="waitingdance2.jpg" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="waitingdance3.jpg" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="waitingdance4.jpg" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="waitingdance5.jpg" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="waitingdance6.jpg" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="waitingdance7.jpg" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="waitingdance8.jpg" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="waitingdance9.jpg" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="waitingdance10.jpg" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="waitingdance11.jpg" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="waitingdance12.jpg" class="gallery-image">
+            </div>
+         </div>
+         <h2>"Mark of the Curd" Storyboards</h2>
+         <div class="gallery-grid" data-gallery="gallery-five">
+            <div class="gallery-item">
+               <img src="storyboard_Katbot_The Mark of the Curd_0000_rotated_resized.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboard_Katbot_The Mark of the Curd_0001_rotated_resized.png" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+               <img src="storyboard_Katbot_The Mark of the Curd_0002_rotated_resized.png" class="gallery-image">
+            </div>
+         </div>
+         <h2>Katbot Character Lineup</h2>
+         <div class="gallery-grid" data-gallery="gallery-six">
+            <div class="gallery-item">
+               <img src="Katbot_design_ch014_exposure fix.jpg" class="gallery-image">
+            </div>
+         </div>
+         <br>
+         <a href="../index.html" class="return-button">Return to Homepage</a>
+      </div>
+      <div class="lightbox" id="lightbox">
+         <div class="counter" id="imageCounter">1 / 1</div>
+         <button class="close" id="closeLightbox">&times;</button>
+         <button class="arrow left" id="prevImage">&#8249;</button>
+         <img src="" alt="Lightbox Image" id="lightboxImage">
+         <button class="arrow right" id="nextImage">&#8250;</button>
+      </div>
+      <script>
+         const lightbox = document.getElementById('lightbox');
+         const lightboxImage = document.getElementById('lightboxImage');
+         const closeLightbox = document.getElementById('closeLightbox');
+         const prevImage = document.getElementById('prevImage');
+         const nextImage = document.getElementById('nextImage');
+         const imageCounter = document.getElementById('imageCounter');
+         
+         let currentGallery = [];
+         let currentIndex = 0;
+         
+         document.querySelectorAll('.gallery-grid').forEach(grid => {
+             grid.querySelectorAll('.gallery-image').forEach((img, index) => {
+                 img.addEventListener('click', () => {
+                     const galleryImages = Array.from(grid.querySelectorAll('.gallery-image'));
+                     currentGallery = galleryImages.map(image => image.src);
+                     currentIndex = index;
+                     openLightbox();
+                 });
+             });
+         });
+         
+         function openLightbox() {
+             lightboxImage.src = currentGallery[currentIndex];
+             updateCounter();
+             lightbox.classList.add('active');
+         }
+         
+         function closeLightboxFunc() {
+             lightbox.classList.remove('active');
+         }
+         
+         function showNextImage() {
+             currentIndex = (currentIndex + 1) % currentGallery.length;
+             lightboxImage.src = currentGallery[currentIndex];
+             updateCounter();
+         }
+         
+         function showPrevImage() {
+             currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+             lightboxImage.src = currentGallery[currentIndex];
+             updateCounter();
+         }
+         
+         function updateCounter() {
+             imageCounter.textContent = `${currentIndex + 1} / ${currentGallery.length}`;
+         }
+         
+         closeLightbox.addEventListener('click', closeLightboxFunc);
+         nextImage.addEventListener('click', showNextImage);
+         prevImage.addEventListener('click', showPrevImage);
+         lightbox.addEventListener('click', (e) => {
+             if (e.target === lightbox) closeLightboxFunc();
+         });
+      </script>
+   </body>
+</html>
